@@ -1,0 +1,7 @@
+FROM php:8.2-fpm
+
+# Instalamos extensiones necesarias para conectar con MySQL/MariaDB
+RUN docker-php-ext-install pdo pdo_mysql
+
+# Carpeta de trabajo dentro del contenedor
+WORKDIR /var/www/html
